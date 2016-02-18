@@ -51,6 +51,14 @@
     height: 300px;
     box-shadow:2px 2px 4px #888; 
     float: left;
+    .cat-panel-img{
+      width:100%;
+      height:250px;
+    }
+    .cat-panel-img img{
+      width:100%;
+      height: 95%;
+    }
 
     .cat-panel-header{
       width:100%;

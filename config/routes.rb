@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'secerts#index'
-  get '/products', to: 'secerts#products'
-  resources :secrets
+  root to: 'products#index'
+  get '/products', to: 'products#products'
+  resources :products do
+  collection { post :import }
+  end
 end

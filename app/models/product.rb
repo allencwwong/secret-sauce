@@ -1,17 +1,25 @@
 class Product < ActiveRecord::Base
+  
 
-belongs_to :category
 
 def self.import(file)
-  allowed_attributes = ["id","product_id","make","model","year","note","category"]
-  spreadsheet = open_spreadsheet(file)
-  header = spreadsheet.row(1)
-  (2..spreadsheet.last_row).each do |i|
-    row = Hash[[header, spreadsheet.row(i)].transpose]
-    applications = find_by_id(row["id"]) || new
-    applications.attributes = row.to_hash.slice(*row.to_hash.keys)
-    # row.to_hash.select { |k,v| allowed_attributes.include? k }
-    applications.save!
+  
+  if file
+  
+    allowed_attributes = ["id","product_id","make","model","year","note","category","category_id"]
+    spreadsheet = open_spreadsheet(file)
+    header = spreadsheet.row(1)
+    (2..spreadsheet.last_row).each do |i|
+      row = Hash[[header, spreadsheet.row(i)].transpose]
+      products = find_by(id: row["id"]) || new
+      products.attributes = row.to_hash.slice(*row.to_hash.keys)
+      puts products.attributes
+       #row.to_hash.select { |k,v| allowed_attributes.include? k }
+      products.save!
+    end
+
+  else
+    belongs_to :category
   end
 end
 
@@ -27,6 +35,8 @@ end
 
 
 end
+
+
 
 # file.path, packed: false, file_warning: :ignore
 

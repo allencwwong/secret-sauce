@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'products#index'
-  get '/products', to: 'products#products'
+  get '/import', to: 'products#products_import'
   resources :products do
   collection { post :import }
   end

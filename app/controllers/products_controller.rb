@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.all 
+
   end
 
   def show
@@ -8,12 +9,13 @@ class ProductsController < ApplicationController
     @categories = Category.all
   end
 
-  def products
-    @categories = Category.all 
+  def products_import
+    @categories = Category.all    
   end
 
   def import
-    @categories = Category.all   
+    @categories = Category.all  
+    @allen = "allen" 
     Product.import(params[:file])
     redirect_to root_url, notice: "Products imported."
   end

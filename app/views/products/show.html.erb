@@ -7,18 +7,23 @@
     <div id="show" class="container-fluid"><!-- Wrapper for slides -->
       <div id="myCarousel" class="carousel slide row" data-ride="carousel"> 
         <div class="carousel-inner col-lg-12" role="listbox">
-          <div class="item active">
-            <img src="" alt="Chania"> 
+          
+          <% @categories.each do |category| %>
+           <% if category.id == params[:id].to_i %>
+             <% category.photos.each_with_index do |photo,index| %>
+              <% if index === 0 %>
+              <div class="item active">
+                <%= image_tag(photo.photo_url) %>
+              </div>
+              <% else %>
+                <div class="item">
+                <%= image_tag(photo.photo_url) %>
+              </div>
+              <% end %>
+             <% end %>
+           <% end %>
+          <% end %>
 
-          </div>
-
-          <div class="item">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/2000LincolnTownCar.jpg" alt="Chania">
-          </div>
-
-          <div class="item">
-            <img src="http://blog.caranddriver.com/wp-content/uploads/2015/09/Audi-e-tron-quattro-concept-placement-626x382.jpg" alt="Flower">
-          </div>
 
         
 
@@ -33,9 +38,26 @@
         </a>
 
         <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active" ><img src=""></li>
+
+                  <% @categories.each do |category| %>
+           <% if category.id == params[:id].to_i %>
+             <% category.photos.each_with_index do |photo,index| %>
+                
+                <% if index == 0 %>
+                <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active">
+                <%= image_tag(photo.photo_url) %>
+                <% else %>
+                <li data-target="#myCarousel" data-slide-to="<%= index %>">
+                <%= image_tag(photo.photo_url) %>
+                <% end %>
+              </li>
+             <% end %>
+           <% end %>
+          <% end %>
+
+<!--           <li data-target="#myCarousel" data-slide-to="0" class="active" ><img src=""></li>
           <li data-target="#myCarousel" data-slide-to="1"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/2000LincolnTownCar.jpg" alt="Chania"></li>
-          <li data-target="#myCarousel" data-slide-to="2"><img src="http://blog.caranddriver.com/wp-content/uploads/2015/09/Audi-e-tron-quattro-concept-placement-626x382.jpg" alt="Flower"></li>
+          <li data-target="#myCarousel" data-slide-to="2"><img src="http://blog.caranddriver.com/wp-content/uploads/2015/09/Audi-e-tron-quattro-concept-placement-626x382.jpg" alt="Flower"></li> -->
         </ol>
       </div>
     </div>

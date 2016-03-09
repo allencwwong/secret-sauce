@@ -13,6 +13,10 @@ class ProductsController < ApplicationController
     @categories = Category.all    
   end
 
+  def photos_import
+    @categories = Category.all  
+  end
+
   def import
     @categories = Category.all  
     Product.import(params[:file])
@@ -20,6 +24,9 @@ class ProductsController < ApplicationController
   end
 
   def import_img
+    @categories = Category.all 
+    Photo.import(params[:file])
+    redirect_to root_url, notice: "Images imported."
   end
   
 end

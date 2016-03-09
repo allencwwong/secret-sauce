@@ -15,9 +15,11 @@ class ProductsController < ApplicationController
 
   def import
     @categories = Category.all  
-    @allen = "allen" 
     Product.import(params[:file])
     redirect_to root_url, notice: "Products imported."
   end
 
+  def import_img
+  end
+  
 end

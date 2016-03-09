@@ -20,6 +20,7 @@ def self.import(file)
 
   else
     belongs_to :category
+    has_many :photos
   end
 end
 

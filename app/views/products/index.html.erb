@@ -2,17 +2,11 @@
   </style>
 
   <div id="index" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <h1>Secert Saurce</h1>
-        
-      </div>
-    </div>
 
   <div class="row cat-panel-row">
     <% @categories.each do |category|%>      
       <%= link_to product_path(category.id) do %>
-       <div class="col-xs-4 cat-panel pull-left">
+       <div class="col-xs-3 cat-panel pull-left">
          <div class="cat-panel-header">
             <h1><%= category.category_name %></h1>
          </div>

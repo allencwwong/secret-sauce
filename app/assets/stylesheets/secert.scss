@@ -27,7 +27,7 @@ nav{
 
   .navbar-logo, .navbar-logo li, .navbar-logo a{
     display: inline !important;
-    
+    font-size: 36px;
   }
 
   .navbar-nav{
@@ -87,13 +87,23 @@ nav{
 // footer css
 
   footer{
-    height:300px;
+    height:auto;
     width:100%;
     background:#333;
     position: absolute;
     left:0px;
   color:white;
+  padding:20px;
   
+  }
+
+  .contact_info{
+    padding:5px 0px;
+  }
+
+  #copy_right{
+    text-align: center;
+    padding:15px 0 0 0;
   }
 
   // start of index page css
@@ -140,7 +150,7 @@ nav{
   }
 
   .cat-panel-row{
-    margin-top: 65px;
+    margin-top: 85px;
   }
 
   

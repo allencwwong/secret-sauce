@@ -37,6 +37,23 @@
           <span class="sr-only">Next</span>
         </a>
 
+        <ol class="carousel-indicators">
+
+                  <% @categories.each do |category| %>
+           <% if category.id == params[:id].to_i %>
+             <% category.photos.each_with_index do |photo,index| %>
+                
+                <% if index == 0 %>
+                <li data-target="#myCarousel" data-slide-to="<%= index %>" class="active">
+                <%= image_tag(photo.photo_url) %>
+                <% else %>
+                <li data-target="#myCarousel" data-slide-to="<%= index %>">
+                <%= image_tag(photo.photo_url) %>
+                <% end %>
+              </li>
+             <% end %>
+           <% end %>
+          <% end %>
 
 <!--           <li data-target="#myCarousel" data-slide-to="0" class="active" ><img src=""></li>
           <li data-target="#myCarousel" data-slide-to="1"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/2000LincolnTownCar.jpg" alt="Chania"></li>

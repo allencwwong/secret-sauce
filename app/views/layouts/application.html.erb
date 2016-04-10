@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>SecertSaurceApp</title>
+  <title>ProTruckWarehouse | Truck Accessories | Nerf Bars | Bull Bars</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Protruckwarehouse.com offer a wide varities of truck accessories products. From Nerf bars, side steps, to bull bars. Looking for aluminum or stainless steel nerf bars? We have that too!">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,7 +16,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-      <ul class="navbar-logo">
+      <ul class="navbar-logo col-md-12">
         <li><a href="/">PRO-TRUCK ACCESSORIES</a></li>
      </ul>   
       
@@ -27,7 +30,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse col-lg-12" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% @categories.each do |category| %>
         <li><%= link_to "#{category.category_name}",product_path(category) %></li>

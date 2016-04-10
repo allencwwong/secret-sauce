@@ -3,12 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // application css
+body{
+  
+}
+
 .left{
   float:left !important;
 }
 .center{
   margin:0 auto;
   width:1024px;
+}
+
+a{
+  text-decoration: none !important;
 }
 // navbar css
 nav{
@@ -21,13 +29,22 @@ nav{
       padding:10px 28px;
     }
 
+  .navbar-nav{
+    float: none !important;
+    margin:0 auto !important;
+  }
+
   .navbar-fixed-top{
     margin-bottom: 10px;
   }
 
   .navbar-logo, .navbar-logo li, .navbar-logo a{
     display: inline !important;
-    font-size: 36px;
+    font-size: 28px;
+    padding:16px 0 0 0;
+    margin:0px;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   .navbar-nav{
@@ -115,21 +132,23 @@ nav{
     border-radius: 5px;
     border:1px solid #aaa;
     padding:0px;
-    margin:24px;
-    width:30%;
+    margin:24px 10px;
     height: 300px;
     box-shadow:2px 2px 4px #888; 
-    float: left;
     .cat-panel-img{
       width:100%;
       height:250px;
     }
     .cat-panel-img img{
       width:100%;
-      max-height:236px;
-      transition: max-width .5s ease-out;
+      min-width: 100%;
+      min-height: 100%;
+      display: block;
+      margin:0 auto;
       overflow: hidden;
+      border-radius: 0 0 5px 5px;
     }
+
 
     @media only screen and (min-width: 768px) {
     .image-wrap { max-width: 164px; }
@@ -137,7 +156,7 @@ nav{
 
     .cat-panel-header{
       width:100%;
-      min-height:50px;
+      max-height:50px;
       padding:0px;
       margin:0px;
       border-bottom:1px solid #333;
@@ -150,7 +169,7 @@ nav{
   }
 
   .cat-panel-row{
-    margin-top: 130px;
+    margin-top: 150px;
   }
 
   

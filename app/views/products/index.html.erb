@@ -6,14 +6,15 @@
   <div class="row cat-panel-row">
     <% @categories.each do |category|%>      
       <%= link_to product_path(category.id) do %>
-       <div class="col-lg-4 pull-left">
+       <div class="col-md-4 pull-left">
            <div class="cat-panel">
              <div class="cat-panel-header">
                 <h1><%= category.category_name %></h1>
              </div>
              <div class="cat-panel-img">
              <% category.photos.each_with_index do |photo,index| %>
-                 <% if index == 0 %>
+                <!-- missing remove duplication feature if multiple imgs selected as thumb all selected images will show  -->
+                 <% if photo.thumb %>
                  <%= image_tag(photo.photo_url) %>
                  <% end %>
               <% end %>

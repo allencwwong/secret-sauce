@@ -13,10 +13,11 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
+    <div class="row">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header col-md-12">
 
-      <ul class="navbar-logo col-md-12">
+      <ul class="navbar-logo">
         <li><a href="/">PRO-TRUCK ACCESSORIES</a></li>
      </ul>   
       
@@ -28,15 +29,18 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-
+    </div>
+    
+    <div class="row">
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse col-lg-12" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse col-md-12" id="bs-example-navbar-collapse-1">
+      <ul id="main-nav" class="nav navbar-nav">
         <% @categories.each do |category| %>
         <li><%= link_to "#{category.category_name}",product_path(category) %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
+    </div>
   </div><!-- /.container-fluid -->
 </nav>
 

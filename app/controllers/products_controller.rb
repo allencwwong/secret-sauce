@@ -1,6 +1,22 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.all 
+    photos = Photo.all
+    @cat_thumbs = {}
+
+      #missing fall back feature where if cat missing image it will mess up display order
+
+      photos.each do |photo|
+
+      #current last in photo will be displaying photo   
+        if photo.thumb
+          @cat_thumbs[photo.category_id] = photo.photo_url
+        end
+       end 
+  end
+
+  def test
+ 
 
   end
 

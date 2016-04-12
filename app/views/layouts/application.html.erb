@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="Protruckwarehouse.com offer a wide varities of truck accessories products. From Nerf bars, side steps, to bull bars. Looking for aluminum or stainless steel nerf bars? We have that too!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -52,13 +53,13 @@
 <%= yield %>
 
 <footer>
-  <div class="center">
+  
   <div class="row">
 
     <div class="col-xs-12">
       <h1>Have Questions? Or Pricing Inquires? Please contact us at:</h1>
-      <h3 class="contact_info">877-618-8860</h2>
-      <h3 class="contact_info">Info@protruckwarehouse.com</h2>
+      <h3 class="contact_info"><i class="fa fa-phone-square f-icon" aria-hidden="true"></i><a href="tel:1877-61808860">877-618-8860</a></h2>
+      <h3 class="contact_info"><i class="fa fa-envelope f-icon" aria-hidden="true"></i>Info@protruckwarehouse.com</h2>
       <p id="copy_right">Copyright &copy;Pro-Truck Accessories All Right reserved.</p>
     </div>
 <!--     <div id="map" class="col-xs-4 left">
@@ -68,7 +69,7 @@
       <h1>Contact info</h1>
     </div>     -->
 
-  </div>
+  
   </div>
 </footer>
 

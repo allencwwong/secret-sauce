@@ -108,7 +108,12 @@ nav{
     left:0px;
   color:white;
   padding:20px;
-  
+  text-align:center;
+
+  }
+
+  .f-icon{
+    padding:0px 10px;
   }
 
   .contact_info{
@@ -174,19 +179,34 @@ nav{
   }
 
   #show {
-        .carousel-inner > .item > img{
-      width: 70%;
-      height: 500px;
+  
+  .carousel-inner > .item > img{
+
+      min-height:100%;
+      height: auto;
       background: black;
       margin:auto;
   }
   
   .carousel-inner > .item > a > img {
-      max-width: 1200px;
       margin: auto;
   }
 
-  .test{}
+  .carousel-inner{
+    height:500px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .carousel-inner{
+    height:300px;
+  }
+
+    .carousel-inner > .item > img{
+
+      margin-top:100px;
+  }
+
+}
   
   .carousel-indicators li{
     width:100px;

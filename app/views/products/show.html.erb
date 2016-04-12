@@ -60,16 +60,17 @@
       </div>
       <div class="col-md-12">
         <h1>Applications</h1>
-        <table class="table table-hover">
-          
-          <tr>
-            <th>Product Code</th>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Note</th>
-            <th>Color</th>
-          </tr>
+        <table id="tb-applications" class="table table-hover">
+          <thead>       
+            <tr>
+              <th>Product Code</th>
+              <th>Make</th>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Note</th>
+              <th>Color</th>
+            </tr>
+          </thead>  
 
         <% @pt_applications.each do |application| %>
      

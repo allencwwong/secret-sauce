@@ -19,10 +19,27 @@ a{
   text-decoration: none !important;
 }
 // navbar css
+
+#main-nav{
+
+  a:hover{
+    color:#337ab7 !important;
+      text-decoration: none;
+  text-shadow: none;
+  -webkit-transition: 100ms linear 0s;
+  -moz-transition: 100ms linear 0s;
+  -o-transition: 100ms linear 0s;
+  transition: 100ms linear 0s;
+  outline: 0 none;
+  font-size: 20px;
+  }
+}
+
 nav{
   .navbar{
     min-height: 75px;
     box-shadow:0px 1px 24px #888; 
+    color:#fff;
   }
 
     li{
@@ -43,9 +60,13 @@ nav{
     text-decoration: none;
   }
 
+
   .navbar-nav{
-      font-size: 24px;
+      font-size: 18px;
+
     }
+
+
 
 
   @media (max-width: 1440px) {
@@ -94,10 +115,14 @@ nav{
       color:#fff !important;
       background: #666 !important;
     }
-
-
   
 }
+
+   .navbar-inverse .navbar-nav > li > a{
+      color:#fff !important;
+          }
+
+
 // footer css
 
   footer{
@@ -175,6 +200,26 @@ nav{
     margin-top: 150px;
   }
 
+  .jumbotron{
+    width:100%;
+    margin:0px;
+  }
+
+  .header-tag-line{
+    text-align: center;
+    color:white;
+    text-shadow: 1px 1px #000;
+    font-size: 48px;
+  }
+
+  .index-bg1{
+    background: url('http://dirtydeedsindustries.com/wp-content/uploads/2015/01/ford-raptor-background.jpg') 50% 0 no-repeat fixed; min-height: 300px;
+    background-size: cover;
+      }
+  
+  .features{
+    padding:40px 0px;
+  }
   
   }
 

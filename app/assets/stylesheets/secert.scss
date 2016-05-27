@@ -7,6 +7,13 @@ body{
   
 }
 
+.mt10{
+  margin-top:10px;
+}
+.mt20{
+  margin-top: 20px;
+}
+
 .left{
   float:left !important;
 }
@@ -20,10 +27,16 @@ a{
 }
 // navbar css
 
+.navbar-inverse{
+  background: url("http://teautoparts.com/photo/protruckwarehouse/bg_nav.jpg");
+  background-color:#333; // 0165AD 
+  border-color: #ccc;
+}
+
 #main-nav{
 
   a:hover{
-    color:#337ab7 !important;
+    color:#0165AD !important;
       text-decoration: none;
   text-shadow: none;
   -webkit-transition: 100ms linear 0s;

@@ -7,6 +7,10 @@ body{
   
 }
 
+.red{
+  color:red;
+}
+
 .mt10{
   margin-top:10px;
 }
@@ -163,6 +167,10 @@ nav{
     padding:15px 0 0 0;
   }
 
+  .sm{
+    padding:0 10px;
+  }
+
   // start of index page css
 
   #index{
@@ -228,11 +236,29 @@ nav{
     color:white;
     text-shadow: 1px 1px #000;
     font-size: 48px;
+
+
+  }
+  .index-bg1{
+        position: relative;
+    background: #333;
+    overflow: hidden;
   }
 
-  .index-bg1{
+  .index-bg1:before{
     background: url('http://dirtydeedsindustries.com/wp-content/uploads/2015/01/ford-raptor-background.jpg') 50% 0 no-repeat fixed; min-height: 300px;
     background-size: cover;
+content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+
+
       }
   
   .features{
